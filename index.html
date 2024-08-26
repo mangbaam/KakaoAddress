@@ -45,7 +45,9 @@
       }
 
       function postMessageToAndroid(postData) {
-        android.postMessage(postData);
+        android.postMessage("test1");
+        window.android.postMessage("test2");
+        // android.postMessage(postData);
       }
 
       // 우편번호 찾기 화면을 넣을 element
