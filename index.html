@@ -88,11 +88,10 @@
               zonecode: data.zonecode,
             };
             var postDataJsonString = JSON.stringify(postData);
-            console.log("onSelect" + postDataJsonString);
 
-            window.postMessageToAndroid("test1");
             window.postMessageToAndroid(postDataJsonString);
-            window.postMessageToiOS(postData);
+            window.postMessageToAndroid(postData);
+            window.postMessageToiOS(postDataJsonString);
           },
           width: "100%",
           height: "100%",
