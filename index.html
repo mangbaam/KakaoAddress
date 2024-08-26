@@ -82,16 +82,14 @@
                 ? data.jibunAddress
                 : data.autoJibunAddress;
 
-            var postData = {
+            var postData = JSON.stringify({
               roadAddress: fullRoadAddress,
               jibunAddress: jibunAddress,
               zonecode: data.zonecode,
-            };
-            var postDataJsonString = JSON.stringify(postData);
+            });
 
-            window.postMessageToAndroid(postDataJsonString);
             window.postMessageToAndroid(postData);
-            window.postMessageToiOS(postDataJsonString);
+            window.postMessageToiOS(postData);
           },
           width: "100%",
           height: "100%",
