@@ -88,7 +88,8 @@
               zonecode: data.zonecode,
             };
 
-            window.postMessageToAndroid(postData.JSON);
+            window.postMessageToAndroid("test1");
+            window.postMessageToAndroid(postData);
             window.postMessageToiOS(postData);
           },
           width: "100%",
